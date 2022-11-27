@@ -2,8 +2,13 @@
   <header>
     <div class="wrap">
       <div class="form-group fg--search">
-        <input type="text" class="input" placeholder="Search..." />
-        <button type="submit">
+        <input
+          v-model="inputValue"
+          type="text"
+          class="input"
+          placeholder="Search..."
+        />
+        <button @click="clickOnButton" type="button">
           <img
             src="@/assets/img/magnifying-glass.svg"
             alt=""
@@ -14,6 +19,17 @@
     </div>
   </header>
 </template>
+
+<script setup>
+import { ref } from "vue";
+
+const inputValue = ref("");
+
+const clickOnButton = () => {
+  console.log(inputValue.value);
+  inputValue.value = "";
+};
+</script>
 
 <style scoped>
 header {
