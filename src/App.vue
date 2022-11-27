@@ -20,4 +20,7 @@ import Footer from "@/components/Footer.vue";
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
 }
+main {
+  padding: 0 20px;
+}
 </style>

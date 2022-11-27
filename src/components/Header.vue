@@ -1,30 +1,44 @@
 <template>
   <header>
-    <div>
-      <label for=""></label>
-      <input type="text" id="" />
-      <button>
-        <img
-          src="@/assets/img/magnifying-glass.svg"
-          alt=""
-          style="width: 22px; height: 22px"
-        />
-      </button>
+    <div class="wrap">
+      <div class="form-group fg--search">
+        <input type="text" class="input" placeholder="Search..." />
+        <button type="submit">
+          <img
+            src="@/assets/img/magnifying-glass.svg"
+            alt=""
+            style="width: 22px; height: 22px"
+          />
+        </button>
+      </div>
     </div>
-    <div class="wrap"></div>
   </header>
 </template>
 
 <style scoped>
 header {
-  line-height: 1.5;
   height: 80px;
-}
-
-header .wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  background-color: #ccc;
+}
+.wrap {
   max-width: 980px;
+  width: 100%;
+}
+.form-group {
+  display: flex;
+  justify-content: right;
+  padding: 1rem;
+  align-items: center;
+}
+.input {
+  height: 22px;
+  width: 200px;
+  padding: 1rem;
+}
+button {
+  height: 36px;
 }
 </style>
